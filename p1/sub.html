@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form>
+        <h1>Registration Form</h1>
+        <label for="user" id="uu">Username</label>
+        <input type="text" id="user" placeholder="Enter your username">
+        <p id="p1"></p>
+        <label for="pass" id="pp">Password</label>
+        <input type="password" id="pass" placeholder="Enter your Password">
+        <label for="sem" id="ss">Semester</label>
+        <select id="sem">
+            <option value="select">Select your semester</option>
+            <option value="1st">1ST</option>
+            <option value="2nd">2nd</option>
+        </select>
+        <fieldset>
+            <legend>Course Taken:</legend>
+            <label><input type="checkbox" id="comp102">Comp102</label>
+            <label><input type="checkbox" id="comp206">Comp206</label>
+            <label><input type="checkbox" id="math101">MATH101</label>
+        </fieldset>
+        <label><input type="checkbox" id="sign">Sign up</label>
+        <button type="button" onclick="reg()">Register</button>
+    </form>
+    
+    <script>
+        function reg() {
+            const username = document.getElementById("user").value;
+            const password = document.getElementById("pass").value;
+            const semester = document.getElementById("sem").value;
+            const signUp = document.getElementById("sign").checked;
+            const comp206 = document.getElementById("comp206").checked;
+            let flag = false;
+
+            if (!/^[a-zA-Z0-9]{6,12}$/.test(username)) {
+                document.getElementById("user").style.borderColor = "red";
+                document.getElementById("uu").style.color = "red";
+                flag = true;
+            } else {
+                document.getElementById("user").style.borderColor = "initial";
+                document.getElementById("uu").style.color = "initial";
+            }
+
+            if (!/^(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+                document.getElementById("pass").style.borderColor = "red";
+                document.getElementById("pp").style.color = "red";
+                flag = true;
+            } else {
+                document.getElementById("pass").style.borderColor = "initial";
+                document.getElementById("pp").style.color = "initial";
+            }
+
+            if (semester !== "1st" && semester !== "2nd") {
+                document.getElementById("sem").style.borderColor = "red";
+                document.getElementById("ss").style.color = "red";
+                flag = true;
+            } else {
+                document.getElementById("sem").style.borderColor = "initial";
+                document.getElementById("ss").style.color = "initial";
+            }
+
+            if (semester === "2nd" && comp206) {
+                alert("Comp206 is not available for the 2nd semester.");
+                flag = true;
+            }
+
+            if (!flag) {
+                let text = `Username: ${username},\nSemester: ${semester},\nSign up: ${signUp ? 'Yes' : 'No'}`;
+                alert(text);
+                let f = confirm("Do you want to submit?");
+                if (f) {
+                    window.open("index.html", "_blank");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

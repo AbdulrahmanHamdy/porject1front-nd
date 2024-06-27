@@ -1,0 +1,180 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.d1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.d1 a, .d1 button, .d1 input[type="submit"] {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+.d1 a:hover, .d1 button:hover, .d1 input[type="submit"]:hover {
+  color: #d1dae4;
+}
+
+.b1, .i1 {
+  background-color: #1e61aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.b1:hover, .i1:hover {
+  background-color: #0056b3;
+}
+
+.d2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.d2 input[type="search"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.d2 input[type="search"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.d2 img {
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.d2 img:hover {
+  transform: scale(1.05);
+}
+
+.d3 footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.ft-main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ft-main-item {
+  margin: 20px;
+  max-width: 200px;
+}
+
+.ft-main-item h2 {
+  color: #fff;
+}
+
+.ft-main-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ft-main-item ul li {
+  margin: 10px 0;
+}
+
+.ft-main-item ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ft-main-item ul li a:hover {
+  color: #fff;
+}
+
+.ft-main-item form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.ft-main-item form input[type="submit"] {
+  background-color: #09131f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ft-main-item form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.ft-social {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ft-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ft-social ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.ft-social ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.ft-legal {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ft-legal ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.ft-legal ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.ft-legal ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ft-legal ul li a:hover {
+  color: #fff;
+}
